@@ -40,7 +40,7 @@ list_of_files = [
 
     # Constants
     f"{project_name}/constants/__init__.py",
-    f"{project_name}/constants/constants.py",
+    f"{project_name}/constants/constant.py",
 
     # Data access
     f"{project_name}/data_access/__init__.py",
@@ -113,9 +113,6 @@ list_of_files = [
     f"{configs_folder}/project_configs.yaml",
     f"{configs_folder}/model_configs.yaml",
     f"{data_folder}/raw/.gitkeep",
-    f"{data_folder}/processed/.gitkeep",
-    f"{data_folder}/interim/.gitkeep",
-    f"{data_folder}/external/.gitkeep",
     f"{notebooks_folder}/README.md",  # Explains notebooks workflow
     f"{notebooks_folder}/01_note01.ipynb",
     f"{notebooks_folder}/02_note02.ipynb",
