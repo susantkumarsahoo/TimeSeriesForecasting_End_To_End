@@ -152,6 +152,7 @@ list_of_files = [
     "docker-compose.yml",
     "main.py",
     "demo.py",
+    "app.py"
 ]
 
 # -------------------------
