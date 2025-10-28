@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Latte Style — Calibri Body</title>
+  <style>
+    /* Latte-inspired color palette (Catppuccin Latte vibes) */
+    :root{
+      --latte--rosewater: #b4637a;
+      --latte--flamingo:  #b4637a;
+      --latte--mauve:     #8b6f9b;
+      --latte--pink:      #b4637a;
+      --latte--maroon:    #8a2b2b;
+      --latte--peach:     #dcae9b;
+      --latte--yellow:    #c6a15f;
+      --latte--green:     #7daea3;
+      --latte--teal:      #6c9fbf;
+      --latte--sky:       #89b4fa;
+      --latte--sapphire:  #74c7ec;
+      --latte--blue:      #6c8cff;
+      --latte--lavender:  #b4befe;
+
+      --latte--base:      #eff1f5;
+      --latte--mantle:    #e6e9ef;
+      --latte--crust:     #dce0e8;
+      --latte--text:      #4c4f69;
+      --latte--subtext:   #6b6f87;
+      --latte--muted:     #9aa0b4;
+      --latte--accent:    var(--latte--teal);
+      --radius: 12px;
+    }
+
+    /* Use Calibri as the primary body font, with sensible fallbacks */
+    body{
+      font-family: Calibri, Candara, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--latte--base), var(--latte--mantle));
+      color: var(--latte--text);
+      margin: 0;
+      padding: 40px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container{
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom: 24px;
+    }
+
+    .logo{
+      width:64px;height:64px;border-radius:14px;
+      background: linear-gradient(135deg, var(--latte--sapphire), var(--latte--teal));
+      box-shadow: 0 6px 18px rgba(76,79,105,0.08);
+      display:flex;align-items:center;justify-content:center;color:var(--latte--base);
+      font-weight:700;font-size:18px
+    }
+
+    h1{font-size:28px;margin:0 0 6px 0}
+    p.lead{margin:0;color:var(--latte--subtext)}
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45));
+      border-radius: var(--radius);
+      padding:18px 20px;
+      box-shadow: 0 10px 30px rgba(34,40,60,0.06);
+      border: 1px solid var(--latte--crust);
+      margin-bottom:18px;
+    }
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+
+    h2{font-size:18px;margin:0 0 12px 0}
+
+    ul.tech-list{padding-left:1.1rem;margin:0;line-height:1.6;color:var(--latte--text)}
+    ul.tech-list li{margin:6px 0}
+
+    pre, code{
+      font-family: Consolas, "Courier New", monospace;
+      font-size:13px;background:rgba(0,0,0,0.03);padding:8px;border-radius:8px;display:block;
+      overflow:auto;border:1px solid var(--latte--crust)
+    }
+
+    .sidebar .section{margin-bottom:12px}
+    .muted{color:var(--latte--muted);font-size:13px}
+
+    .btn{
+      display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:600;
+      background:linear-gradient(180deg,var(--latte--accent),var(--latte--sapphire));color:var(--latte--base);
+      border:none;cursor:pointer;box-shadow: 0 8px 20px rgba(76,79,105,0.08)
+    }
+
+    footer{margin-top:24px;color:var(--latte--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">LC</div>
+      <div>
+        <h1>Latte style — Calibri body</h1>
+        <p class="lead">A lightweight HTML template using Calibri as the body font and a "Latte" color palette.</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main class="card">
+        <h2>Data Splitting — Important Techniques</h2>
+        <p class="muted">A compact list formatted for readability with Calibri body text.</p>
+        <ul class="tech-list">
+          <li><strong>Train-Test Split</strong> — Basic single split (e.g., 80/20).</li>
+          <li><strong>Train-Validation-Test</strong> — Three-way split for tuning and final evaluation.</li>
+          <li><strong>K-Fold Cross Validation</strong> — Robust averaging across k folds.</li>
+          <li><strong>Stratified K-Fold</strong> — Keeps class proportions per fold.</li>
+          <li><strong>Repeated K-Fold</strong> — Multiple runs for variance reduction.</li>
+          <li><strong>Leave-One-Out (LOOCV)</strong> — Extreme k-fold with k = n.</li>
+          <li><strong>Group K-Fold</strong> — Keeps groups (e.g., users) intact across splits.</li>
+          <li><strong>Nested CV</strong> — For hyperparameter selection and unbiased evaluation.</li>
+          <li><strong>TimeSeriesSplit</strong> — Respect temporal order for time-series models.</li>
+          <li><strong>Rolling Window & Expanding Window</strong> — Sliding / growing training windows.</li>
+          <li><strong>Shuffle Split / Monte Carlo CV</strong> — Random repeated splits.</li>
+          <li><strong>Bootstrap Sampling</strong> — Sampling with replacement for uncertainty estimates.</li>
+          <li><strong>Purged K-Fold</strong> — Purges overlap to prevent look-ahead bias (finance).</li>
+        </ul>
+
+        <h2 style="margin-top:16px">Quick code snippet (sketch)</h2>
+        <pre><code>from sklearn.model_selection import train_test_split
+
+# Train-test split (80/20)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)</code></pre>
+
+        <p class="muted">Use the Calibri font for body copy; headings stay readable and balanced.</p>
+      </main>
+
+      <aside class="sidebar">
+        <div class="card section">
+          <h3 style="margin:0 0 8px 0">Palette</h3>
+          <p class="muted">Latte-inspired colors exposed as CSS variables for easy theming.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+            <div style="width:44px;height:28px;border-radius:6px;background:var(--latte--base);border:1px solid var(--latte--crust)"></div>
+            <div style="width:44px;height:28px;border-radius:6px;background:var(--latte--teal)"></div>
+            <div style="width:44px;height:28px;border-radius:6px;background:var(--latte--sapphire)"></div>
+            <div style="width:44px;height:28px;border-radius:6px;background:var(--latte--mauve)"></div>
+            <div style="width:44px;height:28px;border-radius:6px;background:var(--latte--peach)"></div>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h3 style="margin:0 0 8px 0">Usage</h3>
+          <p class="muted">Copy this file as a starting point — change the font stack if Calibri isn't available on the host system.</p>
+          <div style="margin-top:10px"><button class="btn">Download</button></div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Tip: If Calibri isn't installed on a user's machine, consider bundling a substitute webfont or use a close alternative like "Inter" or "Segoe UI".
+    </footer>
+  </div>
+</body>
+</html>
